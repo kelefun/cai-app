@@ -4,8 +4,14 @@ import 'package:flutter/services.dart';
 
 import 'color_schemes.dart';
 import 'package:dynamic_color/dynamic_color.dart';
+import 'package:flutter_dotenv/flutter_dotenv.dart';
 
-void main() {
+Future main() async {
+  //flutter run --dart-define env=prod
+  const String env=String.fromEnvironment('env');
+  // NOTE: fileName defaults to .env and can be omitted in this case.
+  // Ensure that the filename corresponds to the path in step 1 and 2.
+  await dotenv.load(fileName: '$env.env');
   WidgetsFlutterBinding.ensureInitialized();
   //只有竖屏
   SystemChrome.setPreferredOrientations(<DeviceOrientation>[

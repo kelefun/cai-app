@@ -2,7 +2,7 @@ import 'package:caichacha/ui/app_start_screen.dart';
 import 'package:caichacha/ui/food/detail/detail_screen.dart';
 import 'package:caichacha/ui/food/list/list_screen.dart';
 import 'package:go_router/go_router.dart';
-import 'package:caichacha/enums/food_category_enum.dart';
+// import 'package:caichacha/enums/food_category_enum.dart';
 
 // GoRouter configuration
 final router = GoRouter(
